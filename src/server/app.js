@@ -8,7 +8,7 @@ const app = express()
 
 // use the cors middleware with the
 // origin and credentials options
-app.use(cors({ origin: true, credentials: true }))
+app.use(cors())
 
 // use the body-parser middleware to parse JSON and URL-encoded data
 app.use(bodyParser.json())
