@@ -1,11 +1,15 @@
-require("dotenv").config()
-const express = require("express")
+import "dotenv/config"
+import express from "express"
 const app = express()
 
-port = process.env.PORT
+const port = process.env.PORT || 8082
 
-app.get("/", (req, res) => {
-  res.send("<h2>Hello World, I am Palistant</h2>")
+app.get("/api/text", (req, res) => {
+  res.send(
+    { 
+      "data": "I am text from Palistant server", 
+    }
+  )
 })
 
 app.listen(port, () => {
